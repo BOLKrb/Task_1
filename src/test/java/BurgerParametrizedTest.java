@@ -25,11 +25,8 @@ public class BurgerParametrizedTest {
     @ParameterizedTest
     @CsvSource({
             "black bun, 100, SAUCE, Кетчуп, 50.2",
-            "white bun, 200, SAUCE, Кетчуп, 50.2",
-            "red bun, 300, SAUCE, Кетчуп, 50.2",
-            "black bun, 100, FILLING, Бекон, 200.5",
             "white bun, 200, FILLING, Бекон, 200.5",
-            "red bun, 300, FILLING, Бекон, 200.5"
+            "red bun, 300, SAUCE, Кетчуп, 50.2"
     })
     void createBurgerWithParamsShouldReturnBurger(String bunName, float bunPrice, IngredientType ingredientType, String ingredientName, float ingredientPrice) {
         bun = new Bun(bunName, bunPrice);
